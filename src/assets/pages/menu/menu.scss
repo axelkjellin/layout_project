@@ -1,0 +1,14 @@
+.menu__content__block {
+    margin-top: 25px;
+    display: flex;
+    height: 110px;
+}
+
+@media screen and (max-width: 480px) {
+    .menu__content__block {
+        margin: 0px;
+        background-color: red;
+        max-width: 480px;
+        height: 100%;
+    }
+}

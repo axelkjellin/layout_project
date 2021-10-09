@@ -1,0 +1,16 @@
+.header__block {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 300px;
+    flex-grow: 1;
+}
+
+@media screen and (max-width: 480px) {
+    .header__block {
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 260px;
+    }
+}

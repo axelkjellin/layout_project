@@ -1,4 +1,32 @@
+$background-color: rgba(232, 233, 232, 0.837);
+$background: rgb(255,171,0);
+$background-linear: linear-gradient(82deg, rgba(255,171,0,1) 0%, rgba(255,141,0,1) 35%, rgba(255,119,0,1) 100%);
+
+*{
+    box-sizing: content-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
+    background-color: $background-color
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital@0;1&display=swap');
+@import './pages/home.scss';
+@import './pages/Header/header.scss';
+@import './pages/Header/components/banner.scss';
+@import './pages/menu/menu.scss';
+@import './pages/menu/components/menu-itens.scss';
+@import './pages/menu/components/card-button.scss';
+@import './pages/main/components/select/select.scss';
+@import './pages/main/components/select/select-filter.scss';
+@import './pages/main/main-page.scss';
+@import './pages/main/components/card/card.scss';
+
+//font-awesome
+$fa-font-path: '~@fortawesome/fontawesome-free/webfonts'; 
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/regular';

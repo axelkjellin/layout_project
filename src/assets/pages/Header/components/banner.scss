@@ -1,0 +1,121 @@
+.banner__block {
+    width: 100%;
+    border-bottom: 4px solid orange;
+    background-image: url('https://assets.kpmg/is/image/kpmg/dotted-spherical-ball-texture-light-blue-background:cq5dam.web.1400.350');
+    background-size: cover;
+    box-shadow: 0 0 8px rgb(0, 0, 0, 1);
+}
+
+.banner__content {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10%;
+}
+
+.banner__top__content {
+    display: flex;
+    margin-top: 40px;
+}
+
+.banner__top__content__title {
+    position: relative;
+    top: 12px;
+    margin-left: 10px;
+    font-size: 35px;
+    color: white;
+}
+
+.banner__middle__content {
+    display: flex;
+    width: 50%;
+    margin-top: 15px;
+    font-size: 20px;
+    color: white;
+}
+
+.banner__end__content {
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+}
+
+.banner__end__content__currency {
+    color: white;
+    font-size: 16px;
+    margin-top: 18px;
+}
+
+.banner__end__content__price {
+    color: white;
+    font-size: 40px;
+    margin-left: 5px;
+}
+
+.banner__end__content__button {
+    background: $background;
+    background: $background-linear;
+    height: 30px;
+    width: 100px;
+    margin-left: 15px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .banner__middle__content {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .banner__block {
+        height: 250px;
+        background-position: center;
+        width: 100%;
+    }
+
+    .banner__content {
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+    }
+    
+    .banner__top__content {
+        width: 25px;
+        height: 25px;
+    }
+    
+    .banner__top__content__title {
+        position: absolute;
+        width: 300px;
+        top: 45px;
+        left: 120px;
+        // margin-left: 10px;
+        font-size: 15px;
+        color: white;
+    }
+
+    .banner__top__content__itens > img {
+        position: relative;
+        width: 100px;
+        height: 25px;
+    }
+    
+    .banner__middle__content {
+        display: flex;
+        width: 75%;
+        font-size: 15px;
+        color: white;
+    }
+    .banner__end__content__currency {
+        color: white;
+        font-size: 16px;
+        margin-top: 22px;
+    }
+
+    .banner__end__content__button {
+        margin-left: 45px;
+    }
+}

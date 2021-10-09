@@ -1,0 +1,20 @@
+.select__block {
+    font-weight: 700;
+    width: 100%;
+    // margin: 0 180px;
+    display: flex;
+    align-items: center;
+}
+
+.select__input__content {
+    margin-left: 15px;
+    width: 15rem;
+    height: 1.4rem;
+    border: solid 1px rgb(201, 201, 201);
+}
+
+@media screen and (max-width: 480px) {
+    .select__block {
+        justify-content: space-around;
+    }
+}
