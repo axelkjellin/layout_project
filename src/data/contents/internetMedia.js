@@ -5,6 +5,6 @@ export const internetMedia = {
     name: 'Mídia / Internet',
     content: 'O Aplicativo Balanço Patrimonial realiza a consulta de todos os balanços que são publicados nos Diários Oficiais de Empresas S.A. de capital aberto e limitadas (LTDA) de grande porte.',
     icon: 'fas fa-globe-americas',
-    price: '29.90',
-    launch: new Date('1992', '00', '01')
+    price: 39.99,
+    launch: new Date('1990', '00', '01')
 }

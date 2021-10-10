@@ -8,7 +8,7 @@ import { registration } from './contents/registration';
 import { regulator } from './contents/regulator';
 import { restrictedList } from './contents/restrictedList';
 
-const contentsCards = (filtered) => {
+const contentsCards = (filtered, order) => {
     const cards = []
     cards.push(professional)
     cards.push(regulator)
@@ -19,8 +19,37 @@ const contentsCards = (filtered) => {
     cards.push(propertyAndRealEstate)
     cards.push(registration)
     cards.push(financial)
+    console.log(order)
+    
+    if(!order || order.id == 1) {
+        return filtered == 10 || !filtered ? cards : getFilteredCards(cards, filtered)
+    } else {
+        if(order.id == 2) {
+            return filtered == 10 || !filtered ? sortByPrice(cards) : getFilteredCards(cards, filtered)
+        }
 
-    return filtered == 10 || !filtered ? cards : getFilteredCards(cards, filtered)
+        if(order.id == 3) {
+            return filtered == 10 || !filtered ? sortByDate(cards) : getFilteredCards(cards, filtered)
+        }
+    }
+}
+
+function sortByPrice(cards) {
+    cards.sort(priceOrder);
+    return cards
+}
+
+function priceOrder(a, b) {
+    return a.price - b.price
+}
+
+function sortByDate(cards) {
+    cards.sort(dateOrder);
+    return cards
+}
+
+function dateOrder(a, b) {
+    return a.launch - b.launch
 }
 
 function getFilteredCards(cards, filtered) {

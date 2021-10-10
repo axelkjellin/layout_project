@@ -2,8 +2,8 @@
   <div class="home__block">
       <Header />
       <Menu v-on:dispatchToHome="filter"/>
-      <SelectFilter />
-      <MainPage :selectedFilter="this.selectedFilter"/>
+      <SelectFilter v-on:dispatchSelectedORderToHome="order"/>
+      <MainPage :selectedFilter="this.selectedFilter" :selectedOrder="this.selectedOrder"/>
   </div>
 </template>
 
@@ -23,7 +23,8 @@ export default {
   },
   data() {
     return {
-      selectedFilter: null
+      selectedFilter: null,
+      selectedOrder: null
     }
   },
   methods: {
@@ -31,15 +32,13 @@ export default {
       if(id) {
         this.selectedFilter = id
       }
+    },
+    order(option) {
+      if(option) {
+        this.selectedOrder = option
+      }
     }
   },
-  // computed: {
-  //   filter(id) {
-  //     if(id) {
-  //       this.selectedFilter = id
-  //     }
-  //   }
-  // }
 }
 </script>
 

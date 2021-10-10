@@ -6,6 +6,16 @@
             </div>
             <div class="card__header__name">
                 {{card.name}}
+                <!-- 
+                    descomente o trecho abaixo para visualizar a data de cada produto na pagina para conferir o funcionamento, 
+                    depois comente novamente, não foi feita nenhuma estilização nem formatação correta pois nao faz parte do card pedido
+                    foi deixado ai apenas para conferir
+                -->
+                <!-- 
+                    <div>
+                        {{ (card.launch.getDate()) +'/' +(card.launch.getMonth() +1)+ '/' + card.launch.getYear()}}
+                    </div> 
+                -->
             </div>
         </div>
         <div class="card__content">

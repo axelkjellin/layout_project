@@ -1,8 +1,7 @@
 <template>
     <div class="main__page__block">
         <div class="main__page__content">
-            <div v-for="card in getFilteredCards(this.selectedFilter)" :key="card.id">
-                {{card}}
+            <div v-for="card in getCards(this.selectedFilter, this.selectedOrder)" :key="card.id">
                 <Card :card="card"/>
             </div>
         </div>
@@ -15,26 +14,32 @@ import { contentsCards } from '../../data/contentsCards'
 
 export default {
     name: 'MainPage',
-    props:['selectedFilter'],
+    props:['selectedFilter', 'selectedOrder'],
     components: {
         Card
     },
     data() {
         return {
-            cards: this.getFilteredCards(this.selectedFilter)
+            cards: this.getCards(this.selectedFilter, this.selectedOrder)
         }
     },
     methods: {
-        getFilteredCards(selectedFilter) {
-            if(selectedFilter) {
-                return contentsCards(selectedFilter)
+        getCards(selectedFilter, selectedOrder) {
+            console.log('opa')
+            if(selectedFilter || selectedOrder) {
+                return contentsCards(selectedFilter, selectedOrder)
             }
 
             return contentsCards()
         }
     },
     watch: {
-
+        'this.selectedFilter': function() {
+            console.log('opa')
+        },
+        'this.selectedOrder': function() {
+            console.log('opblza')
+        }
     }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
     <div class="filter__block">
-        <Select />
+        <Select  v-on:orderBySelect="selectedOrder" />
     </div>
 </template>
 
@@ -10,6 +10,11 @@ export default {
     name: 'SelectFilter',
     components: {
         Select
-    }
+    },
+    methods: {
+        selectedOrder(option) {
+            this.$emit('dispatchSelectedORderToHome', option)
+        }
+    },
 }
 </script>
