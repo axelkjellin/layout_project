@@ -1,6 +1,5 @@
 <template>
     <div class="card__block">
-
         <div class="card__header" >
             <div class="card__header__icon">
                 <i :class="card.icon"></i>

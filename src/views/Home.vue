@@ -1,9 +1,9 @@
 <template>
   <div class="home__block">
       <Header />
-      <Menu />
+      <Menu v-on:dispatchToHome="filter"/>
       <SelectFilter />
-      <MainPage />
+      <MainPage :selectedFilter="this.selectedFilter"/>
   </div>
 </template>
 
@@ -20,7 +20,26 @@ export default {
     Menu,
     SelectFilter,
     MainPage
-  }
+  },
+  data() {
+    return {
+      selectedFilter: null
+    }
+  },
+  methods: {
+    filter(id) {
+      if(id) {
+        this.selectedFilter = id
+      }
+    }
+  },
+  // computed: {
+  //   filter(id) {
+  //     if(id) {
+  //       this.selectedFilter = id
+  //     }
+  //   }
+  // }
 }
 </script>
 

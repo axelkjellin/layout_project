@@ -1,6 +1,6 @@
 <template>
     <div class="menu__content__block">
-        <MenuItens />
+        <MenuItens v-on:filteredByMenuItens="filteredByMenu"/>
     </div>
 </template>
 
@@ -10,6 +10,11 @@ export default {
     name: 'Menu',
     components: {
         MenuItens
-    }
+    },
+    methods: {
+        filteredByMenu(id) {
+            this.$emit('dispatchToHome', id)
+        }
+    },
 }
 </script>

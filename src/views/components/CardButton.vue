@@ -1,5 +1,5 @@
 <template>
-    <button class="card__button__block">
+    <button class="card__button__block" @click="$emit('filtered', button.id)">
         <div class="card__button__icon">
             <i :class="button.icon"></i>
         </div>
@@ -13,10 +13,5 @@
 export default {
     name: 'CardButton',
     props: ['button'],
-    data() {
-        return {
-        }
-    },
-
 }
 </script>

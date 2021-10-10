@@ -8,7 +8,7 @@ import { registration } from './contents/registration';
 import { regulator } from './contents/regulator';
 import { restrictedList } from './contents/restrictedList';
 
-export const contentsCards = () => {
+const contentsCards = (filtered) => {
     const cards = []
     cards.push(professional)
     cards.push(regulator)
@@ -19,5 +19,14 @@ export const contentsCards = () => {
     cards.push(propertyAndRealEstate)
     cards.push(registration)
     cards.push(financial)
-    return cards
+
+    return filtered == 10 || !filtered ? cards : getFilteredCards(cards, filtered)
 }
+
+function getFilteredCards(cards, filtered) {
+    return cards.filter(card => {
+        return card.id == filtered
+    })
+}
+
+export {contentsCards}

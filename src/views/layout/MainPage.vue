@@ -1,7 +1,8 @@
 <template>
     <div class="main__page__block">
         <div class="main__page__content">
-            <div v-for="card in cards" :key="card.id">
+            <div v-for="card in getFilteredCards(this.selectedFilter)" :key="card.id">
+                {{card}}
                 <Card :card="card"/>
             </div>
         </div>
@@ -14,16 +15,26 @@ import { contentsCards } from '../../data/contentsCards'
 
 export default {
     name: 'MainPage',
+    props:['selectedFilter'],
     components: {
         Card
     },
     data() {
         return {
-          cards: contentsCards()
+            cards: this.getFilteredCards(this.selectedFilter)
         }
     },
-    beforeMount() {
+    methods: {
+        getFilteredCards(selectedFilter) {
+            if(selectedFilter) {
+                return contentsCards(selectedFilter)
+            }
 
+            return contentsCards()
+        }
     },
+    watch: {
+
+    }
 }
 </script>

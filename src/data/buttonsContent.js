@@ -1,6 +1,6 @@
 export const buttons = [
     {
-        id: 0,
+        id: 10,
         name: 'Todos',
         icon: 'fas fa-user-circle fa-fw'
     },
