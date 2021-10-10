@@ -2,9 +2,37 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    // display: flex;
+    // flex-wrap: wrap;
+    // width: 100%;
 }
 
 .menu__itens_iterator {
     height: inherit;
     width: 10%;
+    // display: flex;
+}
+
+@media screen and (max-width: 480px) {
+    .menu__itens__block {
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .menu__itens_iterator {
+        display: flex;
+        width: none;
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .menu__itens__block {
+        display: flex;
+        width: 100%;
+    }
+    .menu__itens_iterator {
+        display: flex;
+        // width: 100%;
+    }
 }
