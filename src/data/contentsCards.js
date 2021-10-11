@@ -8,7 +8,7 @@ import { registration } from './contents/registration';
 import { regulator } from './contents/regulator';
 import { restrictedList } from './contents/restrictedList';
 
-const contentsCards = (filtered, order) => {
+const contentsCards = (filtered, order, id) => {
     const cards = []
     cards.push(professional)
     cards.push(regulator)
@@ -19,7 +19,6 @@ const contentsCards = (filtered, order) => {
     cards.push(propertyAndRealEstate)
     cards.push(registration)
     cards.push(financial)
-    console.log(order)
     
     if(!order || order.id == 1) {
         return filtered == 10 || !filtered ? cards : getFilteredCards(cards, filtered)

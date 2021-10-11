@@ -25,21 +25,11 @@ export default {
     },
     methods: {
         getCards(selectedFilter, selectedOrder) {
-            console.log('opa')
             if(selectedFilter || selectedOrder) {
                 return contentsCards(selectedFilter, selectedOrder)
             }
-
             return contentsCards()
         }
     },
-    watch: {
-        'this.selectedFilter': function() {
-            console.log('opa')
-        },
-        'this.selectedOrder': function() {
-            console.log('opblza')
-        }
-    }
 }
 </script>

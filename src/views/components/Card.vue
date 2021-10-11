@@ -11,8 +11,8 @@
                     depois comente novamente, não foi feita nenhuma estilização nem formatação correta pois nao faz parte do card pedido
                     foi deixado ai apenas para conferir
                 -->
-                
-                    <!-- <div>
+                <!-- 
+                    <div>
                         {{ (card.launch.getDate()) +'/' +(card.launch.getMonth() +1)+ '/' + card.launch.getYear()}}
                     </div> 
                 -->
@@ -24,7 +24,7 @@
         <div class="card__footer">
             <span>R$ {{card.price}}</span>
             <button>
-                <router-link class="router__link__decoration" to="Details">                
+                <router-link class="router__link__decoration" :to="{path: '/details/'+card.id}">                
                     Saiba mais
                 </router-link>
             </button>
