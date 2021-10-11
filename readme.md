@@ -1,6 +1,6 @@
 Olá,
 
-Para rodar o sistema, vá pelo seu terminal até a pasta rapido do projeto
+Para rodar o sistema, vá pelo seu terminal até a pasta raiz do projeto
 e rode o comando:
 npm run start
 
